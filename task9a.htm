@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{ list-style: none; }
+        li {border: 0.3px solid black;
+            width: 100px;
+            height: 40px; 
+        }
+    </style>
+</head>
+<body>
+    <button onclick="add()">+</button>
+    <button onclick="clean()">-</button>
+    <ul id="ntc">
+
+    </ul>
+    <script>
+        let ntc = document.getElementById('ntc')
+        let kod =''
+        count = 0
+
+        function add(){
+            count++
+            show()
+        }
+        function clean(){
+            count--
+            show()
+        }
+
+        function show(){
+            let kod = ''
+            for(i=0; i<count; i++){
+                kod+=`<li><h3>Xezer</h3></li>`
+            }
+            ntc.innerHTML= kod
+        }
+
+    </script>
+</body>
+</html>
